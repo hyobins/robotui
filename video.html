@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        video {width: 100%; display: block; margin: 0; padding : 0; }
+
+      </style>
+
+</head>
+<body style="background-color: white; margin:0px; padding : 0;">
+        <video autoplay muted id="player">
+            <source src="sample.mp4" type="video/mp4">
+            Error!
+        </video>
+
+        <!-- <buㄴtton id="button">skip</button> -->
+    <script>
+        function sleep (delay) {
+            var start = new Date().getTime();
+            while (new Date().getTime() < start + delay);
+        }
+    </script>
+
+    <script type="text/javascript">
+    document.getElementById('player').addEventListener('ended', function(){
+        sleep(1000);
+        location.href='menu.html'
+    });
+    </script>
+
+
+    <script>
+        var video = document.getElementById("player");
+        var button = document.getElementById("button");
+        button.addEventListener("click", function(e) {
+        console.log(video.duration);
+        video.play();
+        video.pause();
+        video.currentTime = video.duration;
+// 	video.play();
+})
+
+    </script>
+
+</body>
+</html>
