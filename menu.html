@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
     <link rel='stylesheet' type='text/css' href='style.css' />
+    <link rel='stylesheet' type='text/css' href='popup.css' />
+
 
     <title>Menu Page</title>
     <style type="text/css">
@@ -42,6 +44,10 @@
         position: static;
       }
 
+      .btn-success{
+        text-align: center;
+      }
+
       
     </style>
   </head>
@@ -49,6 +55,7 @@
   <body>
     <div class="row">
 
+<!-- 왼쪽 화면 -->
       <div class="col-6">
         <div class="jumbotron">
           <div class="image">
@@ -56,32 +63,36 @@
           </div>
           
           <br>
-
           <h1 class="dohyeon-font">한국 방정환 재단</h1>
           <hr class="my-4">
           <p class="dohyeon-font">한국 방정환 재단은 어린이-청소년 사랑을 실천하신 소파 방정환 선생님의 가치와 철학을 계승하고자 <br>1998년 설립된 비영리 법인입니다. </p>
-          
           <p class="dohyeon-font">'000펭귄'에 기부해 주신 금액은 <br>방정환 선생님의 뜻을 이어 어린이를 위한 복지에 소중히 사용됩니다.</p>
-          <!-- <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a> -->
+
         </div>
       </div>
 
+<!-- 오른쪽화면 -->
       <div class="col-6">
-        <div class="image">
-          <img src="qrcode.png" alt="qrcode" width="400" height="auto">
-          <p>신한 110-111-1111 김펭귄</p>
+        <br><br>
+        <div id="btn_popup" class="image">
+          <img src="Tablet.png" alt="tab" width="700">
         </div>
-        <div class="logo">
-          <img src="header copy.png" width="300px">
-        </div>
-        
-      </div>
-    </div>
-    
-    
-    
-    
-
+        <!-- <button id="btn_popup" type="button" class="btn btn-success">Success</button> -->
+        <div class="dim-layer">
+          <div class="dimBg"></div>
+            <div id="notice_layer" class="pop-layer">
+              <div class="pop-container">
+                <div class="pop-conts">
+                  <div class="image">
+                    <img src="qrcode.png" alt="qrcode" width="300" height="auto">
+                    <p>신한 110-111-1111 김펭귄</p>
+                </div>
+              </div>
+              <div class="btn-r"> <a href="#" class="btn-layerClose">기부 완료</a></div>
+              
+            </div></div></div></div>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>  
+    <script src="popup.js"></script>        
  
   </body>
 </html>
