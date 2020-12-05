@@ -1,8 +1,12 @@
+{% load static %}
+
 <!doctype html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
+    <!-- <script type="text/javascript" src="http://static.robotwebtools.org/EventEmitter2/current/eventemitter2.min.js"></script>
+    <script type="text/javascript" src="http://static.robotwebtools.org/roslibjs/current/roslib.min.js"></script> -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
@@ -66,7 +70,7 @@
           <h1 class="dohyeon-font">한국 방정환 재단</h1>
           <hr class="my-4">
           <p class="dohyeon-font">한국 방정환 재단은 어린이-청소년 사랑을 실천하신 소파 방정환 선생님의 가치와 철학을 계승하고자 <br>1998년 설립된 비영리 법인입니다. </p>
-          <p class="dohyeon-font">'000펭귄'에 기부해 주신 금액은 <br>방정환 선생님의 뜻을 이어 어린이를 위한 복지에 소중히 사용됩니다.</p>
+          <p class="dohyeon-font">PengDoRI에 기부해 주신 금액은 <br>방정환 선생님의 뜻을 이어 어린이를 위한 복지에 소중히 사용됩니다.</p>
 
         </div>
       </div>
@@ -85,14 +89,18 @@
                 <div class="pop-conts">
                   <div class="image">
                     <img src="qrcode.jpeg" alt="qrcode" width="300" height="auto">
-                    <p>신한 110-111-1111 김펭귄</p>
+                    <p>기업 608-033136-01-015 김민우</p>
                 </div>
               </div>
-              <div class="btn-r"> <a href="#" class="btn-layerClose">기부 완료</a></div>
+              <div id="completion" class="btn-r"> <a href="#" class="btn-layerClose">기부 완료</a></div>
               
             </div></div></div></div>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>  
-    <script src="popup.js"></script>        
+    <script src="popup.js"></script>
+    <script src="scripts.js"></script>
+    <!--roslibjs 연결-->
+    <script src="{% static 'js/roslibjs/build/roslib.js' %}"></script>
+    <script src="{% static 'js/scripts.js' %}"></script>        
  
   </body>
 </html>
